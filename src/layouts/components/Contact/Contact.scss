@@ -1,0 +1,89 @@
+.contact {
+    &__header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: 30% 45%;
+        gap: 15%;
+        padding: 0 10rem;
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__option {
+        background-color: var(--color-bg-variant);
+        padding: 2rem 3rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        transition: var(--transition);
+        &:hover {
+            background-color: transparent;
+            border: 1px solid var(--color-bg-variant);
+        }
+    }
+
+    &__icon {
+        display: block;
+        font-size: 3rem;
+    }
+    &__title {
+        font-size: 1.8rem;
+    }
+    &__name {
+        color: var(--color-light);
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    &__mess {
+        color: var(--color-primary);
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: transparent;
+        border: 2px solid var(--color-bg-variant);
+        resize: none;
+        color: var(--color-white);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contact {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            width: var(--container-width-md);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact {
+        &__container {
+            width: var(--container-width-sm);
+            padding: 0;
+        }
+        &__input,
+        &__textarea {
+            font-size: 1.6rem;
+        }
+    }
+}

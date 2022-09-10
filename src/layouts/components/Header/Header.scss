@@ -1,0 +1,92 @@
+.header {
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 7rem;
+    &__container {
+        text-align: center;
+        height: 100%;
+        position: relative;
+    }
+    &__button {
+        margin: 2.5rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        position: absolute;
+        left: 50rem;
+        top: 35%;
+        font-size: 2rem;
+        &::after {
+            content: '';
+            width: 1px;
+            height: 2rem;
+            background-color: var(--color-primary);
+        }
+        & a:hover {
+            color: var(--color-primary-variant);
+        }
+    }
+    &__avatar {
+        background: linear-gradient(var(--color-primary), transparent);
+        width: 22rem;
+        height: 30rem;
+        position: absolute;
+        left: calc(50% - 11rem);
+        border-radius: 12rem 12rem 0 0;
+        overflow: hidden;
+        padding: 5rem 1.5rem 1.5rem 1.5rem;
+    }
+}
+
+// Media Responsive
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+    .header {
+        &__socials {
+            left: 20rem;
+            top: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .header {
+        &__container {
+            width: var(--container-width-md);
+        }
+        &__socials {
+            left: 0;
+            top: 45%;
+        }
+        &__avatar {
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 42rem;
+            border-radius: 17rem 17rem 0 0;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .header {
+        &__socials {
+            display: none;
+        }
+        &__container {
+            width: var(--container-width-sm);
+        }
+        &__avatar {
+            width: var(--container-width-lg);
+            left: 50%;
+            transform: translateX(-50%);
+            height: 35rem;
+            border-radius: 17rem 17rem 0 0;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.experience {
+    &__header {
+        text-align: center;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+    &__skills {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    &__frontend {
+        background-color: var(--color-bg-variant);
+        margin-top: 2rem;
+        padding: 3rem;
+        max-width: 50rem;
+        width: 100%;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        transition: var(--transition);
+        &:hover {
+            background-color: transparent;
+            border: 1px solid var(--color-bg-variant);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    &__item {
+        width: 100%;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 3rem;
+    }
+
+    &__icon {
+        color: var(--color-primary);
+        font-size: 3rem;
+    }
+
+    &__name {
+        font-size: 2rem;
+    }
+
+    &__desc {
+        color: var(--color-light);
+        font-size: 1.4rem;
+        margin-left: 4rem;
+    }
+}
+
+// media responsive
+
+@media screen and (max-width: 1024px) {
+    .experience {
+        &__frontend {
+            max-width: 60rem;
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .experience {
+        &__item {
+            width: max-content;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .experience {
+        &__container {
+            width: var(--container-width-sm);
+        }
+        &__frontend {
+            max-width: 60rem;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}

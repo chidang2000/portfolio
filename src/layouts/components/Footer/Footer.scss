@@ -1,0 +1,47 @@
+.footer {
+    margin-top: 8rem;
+    background-color: var(--color-primary-variant);
+    padding: 6rem 0 2rem;
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    &__list {
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__link {
+        font-size: 1.8rem;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 4rem;
+    }
+
+    &__icon {
+        background-color: black;
+        padding: 1rem 1.6rem;
+        border-radius: 1rem;
+        color: var(--color-white);
+        font-size: 1.6rem;
+    }
+
+    &__author {
+        font-size: 2rem;
+        color: var(--color-light);
+    }
+}
+
+//media responsive
+
+@media screen and (max-width: 600px) {
+    .footer {
+        &__list {
+            flex-direction: column;
+        }
+    }
+}
